@@ -1,16 +1,16 @@
 //////////////////PROBLEM 1////////////////////
 
-// var name = 'Tyler';
+var name = 'Tyler';
 //Create a function called isTyler that accepts name as it's only parameter.
 //If the argument you passed in is equal to 'Tyler', return true. If it's not, return false.
 
   //Code Here
-// function isTyler(name) {
-//   if (name === 'Tyler') {
-//     return true;
-//   }
-//   return false;
-// }
+function isTyler(name) {
+  if (name === 'Tyler') {
+    return true;
+  }
+  return false;
+}
 //////////////////PROBLEM 2////////////////////
 
 
@@ -68,11 +68,11 @@ function myName() {
 }
 
 //Now save the function definition of myName into a new variable called newMyName
-var newMyName = myName();
+var newMyName = myName;
   //Code Here
 
 //Now alert the result of invoking newMyName
-alert()
+alert(newMyName);
 
 
 //////////////////PROBLEM 7////////////////////
@@ -81,10 +81,15 @@ alert()
 
 //Create a function called outerFn which returns an anonymous function which returns your name.
 
-  //Code Here
+function outerFn() {
+  return function() {
+    return "Timothy";
+  }
+}
 
 //Now save the result of invoking outerFn into a variable called innerFn.
-
+var innerFn = outerFn();
   //Code Here
 
 //Now invoke innerFn.
+innerFn();
